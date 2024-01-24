@@ -33,20 +33,29 @@ If you try typing:
 conda --version
 ```
 
-It will likely raise an error. To have access to conda and therefore python in you `Git Bash` terminal, you need to initialize it. To do so, close `Git Bash` open `Anaconda Prompt (miniconda3)` using your search bar and type:
-
-![Anaconda Prompt](./img/anaconda_prompt.png)
-
-It will display some stuff. Once done close the `Anaconda Prompt (miniconda3)`. When you reopen `Git Bash` you should see `(base)` displayed. It means conda is activated on this terminal:
-
-![Git Bash](./img/git_bash_w_conda.png)
-
-Yet, `python` is not accessible, to make it so use:
+It will likely raise an error. To have access to conda and therefore python in you `Git Bash` terminal, you need to initialize it. To do so, we need to indicate to `Git Bash` where to find conda. Use the following commands:
 
 ```sh
+echo ". /c/Users/{username}/miniconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
+echo "conda activate" >> ~/.bash_profile
 echo "alias python='winpty python.exe'" >> ~/.bashrc
 ```
 
-Close and reopen `Git Bash`. After typing `python` you should get:
+---
+**WARNING**: do not forget to replace `{username}` with yours. To find it you can type:
+
+```sh
+pwd
+```
+
+In my case it will display `/c/Users/adrie` meaning that `adrie` is my username.
+
+---
+
+Make sure to close `Git Bash`. When you reopen `Git Bash` you should see `(base)` displayed. It means conda is activated on this terminal:
+
+![Git Bash](./img/git_bash_w_conda.png)
+
+After typing `python` you should get:
 
 ![Git Bash](./img/git_bash_w_python.png)
