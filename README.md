@@ -1,4 +1,4 @@
-# How to install Python
+# How to install Python :bulb:
 
 <!-- easter egg caché
 -->
