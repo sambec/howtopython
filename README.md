@@ -76,4 +76,5 @@ After typing `python` you should get:
 
 ![Git Bash](./img/git_bash_w_python.png)
 
+
 To start working in your conda envrionnement you can follow [this tutorial](./Create_an_environnement.md).
